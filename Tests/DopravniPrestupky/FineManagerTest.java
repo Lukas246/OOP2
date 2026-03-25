@@ -24,7 +24,7 @@ class FineManagerTest {
         Car auto = new Car("ABC-01", 20, TypAkce.TURNING_LEFT);
 
         // Akce
-        List<String> pokuty = manager.checkFines(auto, krizovatka);
+        List<Fine> pokuty = manager.checkFines(auto, krizovatka);
 
         // Ověření: TypAkce "TURNING_LEFT" se nerovná SignDirection "STRAIGHT" -> Pokuta!
         assertFalse(pokuty.isEmpty(), "Auto mělo dostat pokutu za nedodržení směru.");
@@ -38,7 +38,7 @@ class FineManagerTest {
         // Auto jede přesně 30 - to NENÍ přestupek
         Car auto = new Car("ABC-02", 30, TypAkce.DRIVING_STRAIGHT);
 
-        List<String> pokuty = manager.checkFines(auto, zona30);
+        List<Fine> pokuty = manager.checkFines(auto, zona30);
 
         assertTrue(pokuty.isEmpty(), "Jízda přesně na limitu by neměla být pokutována.");
     }
@@ -54,7 +54,7 @@ class FineManagerTest {
         Car auto = new Car("8A5 4433", 0, TypAkce.PARKING);
 
         // 3. Akce
-        List<String> pokuty = manager.checkFines(auto, ulice);
+        List<Fine> pokuty = manager.checkFines(auto, ulice);
 
         // 4. Ověření
         assertFalse(pokuty.isEmpty(), "Auto parkující v zákazu musí dostat pokutu.");
