@@ -1,0 +1,34 @@
+[
+{
+  "id": 1,
+  "name": "Music festival",
+  "type": "MUSIC",
+  "timestampe": "2026-08-06T18:00:00Z"
+},
+  {
+    "id": 2,
+    "name": "Music concert",
+    "type": "MUSIC",
+    "timestampe": "2026-06-08T18:00:00Z"
+  },
+  {
+    "id": 3,
+    "name": "Tech conference",
+    "type": "CONFERENCE",
+    "timestampe": "2026-12-06T18:00:00Z"
+  },
+  {
+    "id": 4,
+    "name": "Music festival",
+    "type": "ART",
+    "timestampe": "2025-06-06T18:00:00Z"
+  },
+  {
+    "id": 5,
+    "name": "Art exhibition",
+    "type": "ART",
+    "timestampe": "2026-06-09T18:00:00Z"
+  }
+]
+
+
