@@ -59,4 +59,17 @@ class FineManagerTest {
         // 4. Ověření
         assertFalse(pokuty.isEmpty(), "Auto parkující v zákazu musí dostat pokutu.");
     }
+
+    @Test
+    void testNoFineNoSign() {
+        // Lokace bez značek
+        Location volnaCesta = new Location("Volná cesta");
+
+        // Auto jede rovně, ale žádné značky nejsou -> NENÍ přestupek
+        Car auto = new Car("XYZ-123", 50, TypAkce.DRIVING_STRAIGHT);
+
+        List<Fine> pokuty = manager.checkFines(auto, volnaCesta);
+
+        assertTrue(pokuty.isEmpty());
+    }
 }
